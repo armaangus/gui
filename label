@@ -1,0 +1,12 @@
+# def add():
+#      print(10+10)
+# from tkinter import *
+
+# root=Tk()
+
+# root.geometry("300x300")
+
+# btn=Button(root, text="Click me pls", bd="5",background="cyan",command=add)
+
+# btn.pack(side="top")Add commentMore actions
+# root.mainloop()
