@@ -1,0 +1,57 @@
+from tkinter import *
+
+root=Tk()
+root.geometry("300x150")
+
+w=Label(root, text="Chocos and IceCreams", font="50")
+w.pack()
+
+frame=Frame(root)
+frame.pack()
+
+bottomframe=Frame(root)
+bottomframe.pack(side=BOTTOM)
+
+rightframe=Frame(root)
+rightframe.pack(side=RIGHT)
+
+leftframe=Frame(root)
+leftframe.pack(side=LEFT)
+
+b1_button=Button(frame, text="Choco", fg="red",bg="blue")
+b1_button.pack(side=LEFT)
+
+b2_button=Button(frame, text="Dark Choco", fg="brown",bg="beige")
+b2_button.pack(side=LEFT)
+
+b3_button=Button(frame, text="White Choco", fg="blue",bg="beige")
+b3_button.pack(side=LEFT)
+
+b4_button=Button(bottomframe, text="Pastry", fg="green",bg="yellow")
+b4_button.pack(side=BOTTOM)
+
+b5_button=Button(bottomframe, text="Cake", fg="green",bg="pink")
+b5_button.pack(side=BOTTOM)
+
+b6_button=Button(bottomframe, text="Tiramisu", fg="green",bg="cyan")
+b6_button.pack(side=BOTTOM)
+
+b7_button=Button(rightframe, text="Glazed donuts", fg="beige",bg="yellow")
+b7_button.pack(side=RIGHT)
+
+b8_button=Button(rightframe, text="Strawb jelly donuts", fg="red",bg="pink")
+b8_button.pack(side=RIGHT)
+
+b9_button=Button(rightframe, text="Choco donuts", fg="brown",bg="beige")
+b9_button.pack(side=RIGHT)
+
+b10_button=Button(leftframe, text="Orange juice", fg="red",bg="orange")
+b10_button.pack(side=LEFT)
+
+b11_button=Button(leftframe, text="Apple juice", fg="red",bg="green")
+b11_button.pack(side=LEFT)
+
+b12_button=Button(leftframe, text="Mango Juice", fg="orange",bg="beige")
+b12_button.pack(side=LEFT)
+
+root.mainloop()
