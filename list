@@ -1,0 +1,53 @@
+from tkinter import *
+
+top=Tk()
+top.title("My favourite dishes")
+listbox = Listbox(top, height=10,
+                  width=15,
+                  bg="grey",
+                  activestyle="dotbox",
+                  font="Helvetica",
+                  fg="yellow")
+
+top.geometry("300x250")
+
+label=Label(top, text="FOOD ITEMS")
+
+listbox.insert(1, "Nachos")
+listbox.insert(2, "Sandwich")
+listbox.insert(3, "Burger")
+listbox.insert(4, "Pizza")
+listbox.insert(5, "Burrito")
+#listbox.delete(3, END)
+
+label.pack()
+listbox.pack()
+
+top.mainloop()
+
+from tkinter import *
+
+root=Tk
+root.geometry("150x200")
+
+w= Label(root, text="HelloHello",
+            font="50")
+
+w.pack()
+
+scroll_bar=Scrollbar(root)
+
+scroll_bar.pack(side=RIGHT,
+                fill=Y)
+
+mylist=Listbox(root,
+               yscrollcommand=scroll_bar.set)
+
+for line in range(1, 26):
+    mylist.insert(END, "Hi" + str(line))
+
+    mylist.pack(side=LEFT, fill=BOTH)
+
+    scroll_bar.config(command=mylist.yview)
+
+    root.mainloop()
