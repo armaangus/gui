@@ -1,0 +1,53 @@
+from tkinter import messagebox
+from tkinter import *
+
+root=Tk()
+root.geometry("400x400")
+root.title("What book do you want to borrow?")
+
+frame=Frame(root)
+frame.pack()
+
+bottomframe=Frame(root)
+bottomframe.pack()
+
+leftframe=Frame(root)
+leftframe.pack()
+
+rightframe=Frame(root)
+rightframe.pack()
+
+b1_Button=Button(frame, text="The Hobbit", fg="red", bg="orange")
+b1_Button.pack(side=LEFT)
+
+b2_Button=Button(frame, text="Harklights", fg="black", bg="blue")
+b1_Button.pack(side=LEFT)
+
+b3_Button=Button(frame, text="Ground Zero", fg="black", bg="green")
+b3_Button.pack(side=LEFT)
+
+b4_button=Button(frame, text="2023 Guiness World Records!", fg="blue", bg="white")
+b4_button.pack(side=BOTTOM)
+
+b5_button=Button(frame, text="50 WEIRD FACTS THAT YOU DID'NT KNOW!", fg="yellow", bg="purple")
+b5_button.pack(side=BOTTOM)
+
+b6_button=Button(frame, text="English Dictionary", fg="white", bg="blue")
+b6_button.pack(side=BOTTOM)
+
+b7_button=Button(frame, text="Blue Eyes", fg="black", bg="blue")
+b7_button.pack(side=RIGHT)
+
+b8_button=Button(frame, text="Boat Life", fg="blue", bg="brown")
+b8_button.pack(side=RIGHT)
+
+
+b9_button=Button(frame, text="Hello Everyone", fg="red", bg="green")
+b9_button.pack(side=RIGHT)
+
+
+
+
+
+
+root.mainloop()
