@@ -1,0 +1,31 @@
+from tkinter import messagebox
+from tkinter import *
+
+top=Tk()
+top.geometry("400x400")
+top.title("What book do you want to borrow?")
+
+scroll_bar=Scrollbar(top)
+
+def display():
+    messagebox.showinfo("Booked", "all done")
+
+scroll_bar.pack(side=RIGHT,
+                fill=Y)
+
+mylist=Listbox(top,
+               yscrollcommand=scroll_bar.set)
+
+list=["book a", "book b", "book c", "book d", "book e", "book f", "book g", "book h"]
+
+for book in list:
+    mylist.insert(END, str(book))
+
+mylist.pack(side=LEFT, )
+
+scroll_bar.config(command=mylist.yview)
+
+
+btn=Button(top, text="Borrow", bd="5",background="cyan",command=display)
+btn.pack(side=BOTTOM,)
+top.mainloop()
