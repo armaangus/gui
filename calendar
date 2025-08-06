@@ -1,0 +1,24 @@
+from tkinter import *
+
+root=Tk()
+root.title("My Calendar")
+root.geometry("200x200")
+
+calendar_label=Label(root, text="Calendar", bg="red", fg="black")
+calendar_label.pack()
+
+enter_label=Label(root, text="Enter Here", bg="blue", fg="red")
+enter_label.pack()
+
+search_bar=Entry(root,
+                 width=30, bg="white")
+search_bar.pack()
+
+open_calendar=Button(root,
+                     text="Open Calendar", bg="white", fg="black")
+open_calendar.pack()
+
+exit=Button(root,
+             text="Exit", bg="green", fg="white")
+exit.pack()
+root.mainloop()
