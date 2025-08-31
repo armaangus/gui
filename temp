@@ -1,0 +1,25 @@
+from tkinter import *
+
+window=Tk()
+window.geometry("300x300")
+
+def from_dcelsius():
+    farenheit = float(e2_value.get())*33.8
+
+    t1.delete("1.0", END)
+    t1.insert(END, farenheit)
+
+e1=Label(window, text="Enter the weight in degrees celsius.")
+e2_value=StringVar()
+e2=Entry(window, textvariable=e2_value)
+e3=Label(window, text="Farenheit")
+
+t1 = Text(window, height=1, width=20)
+b1=Button(window, text="Convert", command=from_dcelsius)
+
+e1.grid(row=0, column=0)
+e2.grid(row=0, column=1)
+e3.grid(row=1, column=0)
+t1.grid(row=2, column=0)
+b1.grid(row=0, column=2)
+window.mainloop()
