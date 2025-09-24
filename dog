@@ -1,0 +1,13 @@
+import cv2
+
+img=cv2.imread("images/R.png", 0)
+cv2.imshow("R.png", img)
+# img1=cv2.resize(img,(0,0),fx=1,fy=1)#(0,0),fx=0.5,fy=0.5
+# cv2.IMREAD_COLOR (1)
+# cv2.IMREAD_GRAYSCALE (0)
+# cv2.IMREAD_UNCHANGED (-1)
+# cv2.imwrite("matthew.jpeg"img1)
+# cv2.imshow("Resized", img1)
+cv2.waitKey()
+
+cv2.destroyAllWindows()
