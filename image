@@ -1,0 +1,18 @@
+import cv2
+
+img=cv2.imread("input1.png")
+img2=cv2.imread("input2.png")
+
+
+
+
+combine=cv2.addWeighted(img, 0.5, img2, 0.4, 1.5)
+combine2=cv2.addWeighted(img, 0.5, img2, 0.4, 0)
+sub= cv2.subtract(combine, img2)
+cv2.imshow("input1.png", img)
+cv2.imshow("input2.png", img2)
+cv2.imshow("combine", combine)
+cv2.imshow("combine2",combine2)
+cv2.imshow("combine_sub",sub)
+cv2.waitKey()
+cv2.destroyAllWindows()
