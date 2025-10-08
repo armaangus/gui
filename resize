@@ -1,0 +1,10 @@
+import cv2
+
+img = cv2.imread("ancientcity3.png", 1)
+cv2.imshow("Original Image", img)
+
+resized=cv2.resize(img , (100, 100))
+cv2.imshow("resizedImage", resized)
+
+cv2.waitKey(0)
+cv2.destroyAllWindows()
