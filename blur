@@ -1,0 +1,17 @@
+import cv2
+
+image=cv2.imread("ancientcity3.png")
+cv2.waitKey(0)
+
+Gaussian= cv2.GaussianBlur(image, (15,15), 0)
+cv2.imshow("Gaussian Blurring", Gaussian)
+cv2.waitKey(0)
+
+median=cv2.medianBlur(image, 15)
+cv2.imshow("Median BLurring", median)
+cv2.waitKey(0)
+
+bilateral= cv2.bilateralFilter(image, 9, 75, 75)
+cv2.imshow("Bilateral Blurring", bilateral)
+cv2.waitKey(0)
+cv2.destroyAllWindows()
