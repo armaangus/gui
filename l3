@@ -1,0 +1,49 @@
+import cv2
+
+img=cv2.imread("bagimg.png")
+bordered_image=cv2.copyMakeBorder(img, 10, 10, 10, 10, cv2.BORDER_CONSTANT, value=1)
+
+cv2.imshow("Bordered image", bordered_image)
+cv2.waitKey()
+cv2.destroyAllWindows()
+
+import cv2
+
+img=cv2.imread("bagimg.png")
+bordered_image=cv2.copyMakeBorder(img, 10, 10, 10, 10, cv2.BORDER_REFLECT, value=1)
+
+cv2.imshow("Bordered image", bordered_image)
+cv2.waitKey()
+cv2.destroyAllWindows()
+_____________________________________________________________________________________________
+
+import cv2
+img=cv2.imread("chipsimg.png")
+edges=cv2.Canny(img, 100, 100)
+
+cv2.imshow("Original Image", img)
+cv2.imshow("Edged Image", edges)
+cv2.waitkey(0)
+_____________________________________________________________________________________________
+import cv2
+
+img=cv2.imread("ancientcity3.png")
+rows, cols =img.shape
+
+M=cv2.getRotationMatrix2D((cols/2, rows/2), -90, 2)
+res= cv2.warpAffine(img, M, (cols, rows))
+
+result=cv2.rotate(img,cv2.ROTATE_90_CLOCKWISE)
+cv2.imshow("result.png", result)
+cv2.imshow("Original Image", img)
+cv2.imshow("Rotated Image", res)
+cv2.waitKey(0)
+_____________________________________________________________________________________________
+import cv2
+
+image=cv2.imread("bottleimg.png")
+hsvImage=cv2.cvtColor(image, cv2.COLOR_BGR2HSV)
+cv2.imshow("normal", image)
+cv2.imshow("HSV", hsvImage)
+cv2.waitKey(0)
+cv2.destroyAllWindows()
