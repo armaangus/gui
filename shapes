@@ -1,0 +1,21 @@
+import cv2
+
+img=cv2.imread("cat.png")
+cv2.imshow("Cat", img)
+#line
+#lined=cv2.line(img, (0, 120),(240,120), (0,255,0), 5)
+#cv2.imshow("Cut Cat", lined)
+
+#rectangle
+# rect=cv2.rectangle(img, (50,50),(100, 100), (0,255,0), 5)
+# cv2.imshow("rect Cat", rect)
+
+#circle
+# circ=cv2.circle(img, (50,50),(40), (0,255,0), -1)
+# cv2.imshow("round Cat", circ)
+
+#text
+text=cv2.putText(img, "Cat", (100, 100), cv2.FONT_HERSHEY_DUPLEX,5,(255,0,0),5, cv2.LINE_AA)
+cv2.imshow("text Cat", text)
+cv2.waitKey(0)
+cv2.destroyAllWindows()
