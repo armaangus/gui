@@ -1,0 +1,13 @@
+import cv2
+
+img=cv2.imread("R.png")
+img=cv2.resize(img , (240, 240))
+
+rect=cv2.rectangle(img, (70,30),(10,10), 5)
+cv2.imshow("rect_tag", rect)
+
+text=cv2.putText(img,"Doug",(10,25), cv2.FONT_HERSHEY_COMPLEX_SMALL,1,(0,0,0),1, cv2.LINE_AA)
+cv2.imshow("text", text)
+
+cv2.waitKey(0)
+cv2.destroyAllWindows()
