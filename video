@@ -4,8 +4,8 @@ import cv2
 from PIL import Image 
 
 
-os.chdir("C:\Users\Armaa\OneDrive\Desktop\Python\New folder")
-path="C:\Users\Armaa\OneDrive\Desktop\Python\New folder"
+os.chdir("C:/Users/Armaa/OneDrive/Desktop/Python/images")
+path="C:/Users/Armaa/OneDrive/Desktop/Python/images"
 
 mean_height=0
 mean_width=0
@@ -33,3 +33,24 @@ for file in os.listdir("."):
         imgResized=img.resize((mean_width, mean_height), Image.LANCZOS)
         imgResized.save(file, "JPEG", quality = 95)
         print(img.filename.split("\\")[-1], "is resized")
+
+def videoGenerator():
+    video_name= "MyFirstVideo.avi"
+
+    os.chdir("C:/Users/Armaa/OneDrive/Desktop/Python/images")
+
+    images=[]
+    for img in os.listdir("."):
+        if img.endswith(".jpg") or img.endswith(".png"):
+            images.append(img)
+
+            frame=cv2.imread(os.path.join(".", images[0]))
+            height, width, layers=frame.shape
+            video=cv2.VideoWriter(video_name, 0, 1, (width, height))
+            for image in images:
+                video.write(cv2.imread(os.path.join(".", image)))
+
+cv2.waitKey()
+
+cv2.destroyAllWindows()
+
