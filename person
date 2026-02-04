@@ -1,0 +1,26 @@
+class person:
+
+    __password=123
+    password=435
+    
+
+    def __init__(self, skin, eyes, height, weight):
+        self.skin = skin
+        self.eyes = eyes
+        self.height = height
+        self.weight = weight
+        
+    def showPerson(self):
+        print("Hello, I am a person with {} skin and {} eyes. My height is {}m and I weigh {}kg".format(self.skin, self.eyes, self.height,
+        self.weight))
+
+    def showPassword(self):
+        print("Hello, my password is {}".format(self.__password))
+
+    
+
+John = person("white", "hazel", 2.5, 60)
+#John.showPerson()
+John.showPassword()
+#print(John.__password)
+print(John.password)
